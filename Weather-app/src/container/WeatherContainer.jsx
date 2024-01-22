@@ -1,12 +1,13 @@
-// WeatherContainer.js
+// WeatherContainer.jsx
 import React, { useState, useEffect } from 'react';
 import WeatherCard from '../components/WeatherCard';
-import DetailCard from '../components/DetailCard';
-import WeatherService from '../services/WeatherService';
+import DetailContainer from './DetailContainer';
+import WeatherService from '../services/WeatherServices';
 import SearchBar from '../components/SearchBar';
 
 const WeatherContainer = () => {
   const [weatherData, setWeatherData] = useState(null);
+  const [forecastData, setForecastData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -18,8 +19,13 @@ const WeatherContainer = () => {
   const fetchWeatherData = async (city) => {
     setLoading(true);
     try {
-      const data = await WeatherService.getCurrentWeather(city);
-      setWeatherData(data);
+      const [currentData, forecastData] = await Promise.all([
+        WeatherService.getCurrentWeather(city),
+        WeatherService.getWeatherForecast(city),
+      ]);
+
+      setWeatherData(currentData);
+      setForecastData(forecastData);
     } catch (error) {
       setError('Error fetching weather data');
     } finally {
@@ -38,7 +44,7 @@ const WeatherContainer = () => {
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {weatherData && <WeatherCard weatherData={weatherData} />}
-      {weatherData && <DetailCard detailData={weatherData.additionalDetails} />}
+      {forecastData && <DetailContainer forecastData={forecastData} />}
     </div>
   );
 };

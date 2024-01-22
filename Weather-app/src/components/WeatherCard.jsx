@@ -8,11 +8,21 @@ const WeatherCard = ({ weatherData }) => {
 
   const { name } = weatherData.location;
   const temperature = weatherData.current?.temp_c;
+  const condition = weatherData.current.condition?.text;
+  const image = weatherData.current.condition?.icon;
+  
 
   return (
     <div>
       <h2>{name}</h2>
+      <p>{condition}</p>
+      <img
+              src={image}
+              alt="weather image"
+              className="card-img"
+            />
       <p>{temperature}°C</p>
+      
       {/* Display other relevant information here */}
     </div>
   );

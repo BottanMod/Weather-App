@@ -16,9 +16,9 @@ const WeatherService = {
 
   getWeatherForecast: async (city) => {
     try {
-      const response = await fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}`);
+      const response = await fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=7`);
       const data = await response.json();
-      return data;
+      return data.forecast.forecastday; // Extract the forecastday array
     } catch (error) {
       console.error('Error fetching weather forecast:', error);
       throw error;
