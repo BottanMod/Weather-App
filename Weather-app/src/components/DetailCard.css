@@ -1,13 +1,14 @@
-/* DetailCard.css */
 .detail-card {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
-    width: 150px; /* Adjust the width as needed */
+    width: 150px; /* Justera bredden efter behov */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .card-img {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 50px; /* Justera storleken på bilden efter behov */
+    height: 50px; /* Justera storleken på bilden efter behov */
   }
-  

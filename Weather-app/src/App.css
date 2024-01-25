@@ -49,3 +49,14 @@
   font-family: 'Arial', sans-serif;
 }
 
+.week-forecast-container {
+  display: flex;
+  justify-content: space-between; /* Placera dagarna jämnt över containern */
+  gap: 10px; /* Avstånd mellan korten */
+  height: 300px;
+}
+
+.detail-card {
+  flex: 0 0 calc(16.666% - 10px); /* Anpassa bredden för varje kort */
+  max-width: calc(16.666% - 10px); /* Sätt maximal bredd för varje kort */
+}

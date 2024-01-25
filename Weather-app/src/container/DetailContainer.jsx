@@ -30,6 +30,7 @@ export default DetailContainer;*/
 // DetailContainer.js
 import React from 'react';
 import DetailCard from '../components/DetailCard';
+import '../App.css'
 
 const DetailContainer = ({ forecastData }) => {
   if (!forecastData || !Array.isArray(forecastData)) {
@@ -41,13 +42,13 @@ const DetailContainer = ({ forecastData }) => {
 
   return (
     <div>
-      <h2>Veckans väder</h2>
-      <div className="week-forecast">
-        {upcomingDays.map((dayData, index) => (
-          <DetailCard key={index} dayData={dayData} />
-        ))}
-      </div>
+    <h1>Weather Details</h1>
+    <div className="week-forecast-container">
+      {upcomingDays.map((dayData, index) => (
+        <DetailCard key={index} dayData={dayData} />
+      ))}
     </div>
+  </div>
   );
 };
 

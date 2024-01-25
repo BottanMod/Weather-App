@@ -8,6 +8,7 @@ const DetailCard = ({ dayData }) => {
   }
 
   const { date, day } = dayData;
+  const temperature = day.avgtemp_c;
   const minTemperature = day.mintemp_c;
   const maxTemperature = day.maxtemp_c;
   const condition = day.condition?.text;
@@ -17,6 +18,7 @@ const DetailCard = ({ dayData }) => {
     <div className="detail-card">
       <h2>{new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</h2>
       <h3>{condition}</h3>
+      <p>Temperature: {temperature}°C</p>
       <p>Min Temperature: {minTemperature}°C</p>
       <p>Max Temperature: {maxTemperature}°C</p>
       <img src={image} alt="weather image" className="card-img" />
