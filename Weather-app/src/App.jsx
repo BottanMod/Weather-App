@@ -1,13 +1,16 @@
 // App.js
 import React from 'react';
 import WeatherContainer from './container/WeatherContainer';
-import './App.css'; // Import your CSS file
+import DetailContainer from './container/DetailContainer';
+import './App.css'; 
+import './components/WeatherCard.css';
 
 const App = () => {
   return (
     <div className="app-container">
       <h1>Weather Application</h1>
       <WeatherContainer />
+      <DetailContainer />
     </div>
   );
 };

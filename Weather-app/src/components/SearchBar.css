@@ -1,0 +1,30 @@
+/* SearchBar.css */
+
+.search-bar-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .search-bar-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar-button {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  /* Add more styles as needed */
+  

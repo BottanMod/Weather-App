@@ -1,0 +1,13 @@
+/* DetailCard.css */
+.detail-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 150px; /* Adjust the width as needed */
+  }
+  
+  .card-img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
+  

@@ -1,38 +1,25 @@
-// DetailCard.jsx
+// DetailCard.js
 import React from 'react';
+import './DetailCard.css';
 
-
-
-
-const DetailCard = ({ forecastData }) => {
-    console.log('DetailCard forecastData:', forecastData);
-
-  // Check if forecastData is undefined or null
-  if (!forecastData) {
-    return <div>No detailsssasdsss available</div>; // Or some placeholder content
+const DetailCard = ({ dayData }) => {
+  if (!dayData || !dayData.day) {
+    return <div>Loading...</div>;
   }
 
-  // Extract information from the first day's forecast (you may adjust this based on your requirements)
-  const firstDayForecast = forecastData[0];
-  if (!firstDayForecast) {
-    return <div>No details available</div>; // Or some placeholder content
-  }
+  const { date, day } = dayData;
+  const minTemperature = day.mintemp_c;
+  const maxTemperature = day.maxtemp_c;
+  const condition = day.condition?.text;
+  const image = day.condition?.icon;
 
-  // Destructure properties from the first day's forecast
-  const { date, day } = firstDayForecast;
-
-  // Extract additional details
-  const { mintemp_c, maxtemp_c, avgtemp_c, maxwind_kph } = day;
-
-  // Render detailed information based on the provided data
   return (
-    <div>
-      <h2>Details for {date}</h2>
-      <p>Min Temperature: {mintemp_c} °C</p>
-      <p>Max Temperature: {maxtemp_c} °C</p>
-      <p>Average Temperature: {avgtemp_c} °C</p>
-      <p>Max Wind Speed: {maxwind_kph} km/h</p>
-      {/* Add more detailed information */}
+    <div className="detail-card">
+      <h2>{new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</h2>
+      <h3>{condition}</h3>
+      <p>Min Temperature: {minTemperature}°C</p>
+      <p>Max Temperature: {maxTemperature}°C</p>
+      <img src={image} alt="weather image" className="card-img" />
     </div>
   );
 };
