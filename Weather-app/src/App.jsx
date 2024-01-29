@@ -7,8 +7,8 @@ import './components/WeatherCard.css';
 
 const App = () => {
   return (
-    <div className="app-container">
-      <h1>Weather Application</h1>
+    <div className="container">
+      
       <WeatherContainer />
       <DetailContainer />
     </div>

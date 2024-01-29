@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import WeatherCard from '../components/WeatherCard';
 import WeatherService from '../services/WeatherServices';
 import SearchBar from '../components/SearchBar';
-import DetailContainer from './DetailContainer'; // Added import
+import DetailContainer from './DetailContainer'; 
 
 const WeatherContainer = () => {
   const [forecastData, setForecastData] = useState(null);
@@ -31,7 +31,7 @@ const WeatherContainer = () => {
   };
 
   return (
-    <div>
+    <div className="weather-container">
       <SearchBar onSearch={handleSearch} />
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}

@@ -1,14 +1,39 @@
+/* Styles specific to each forecast detail card */
 .detail-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    width: 150px; /* Justera bredden efter behov */
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-img {
-    width: 50px; /* Justera storleken på bilden efter behov */
-    height: 50px; /* Justera storleken på bilden efter behov */
-  }
+  background-color: #2a6cc9; /* Tailwind gray-800 */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-card h4 {
+  font-size: 0.9rem; /* Adjust size for better fit if necessary */
+  margin-bottom: 0.25rem;
+}
+
+.detail-card p {
+  font-size: 1rem;
+  margin: 0.25rem;
+}
+
+.detail-card img {
+  width: 50px; /* Adjust size for better fit if necessary */
+  height: auto;
+  margin-top: 0.5rem;
+  align-self: center;
+}
+
+.detail-card h2{
+margin: 0;
+
+}
+
+.detail-card h3{
+
+  margin-top: 0.30rem;
+}

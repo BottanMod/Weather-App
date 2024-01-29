@@ -51,8 +51,8 @@ const WeatherCard = ({ forecastData }) => {
   const minTemp = forecastData.forecast?.forecastday[0]?.day?.mintemp_c;
   const maxTemp = forecastData.forecast?.forecastday[0]?.day?.maxtemp_c;
   return (
-    <div>
-      <div className='card'>
+    <div className='center-div'>
+      <div className='weather-card'>
         <h2>{name}</h2>
         <h3>{condition}</h3>
         <h1>{temperature}°C</h1>

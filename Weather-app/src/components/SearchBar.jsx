@@ -12,6 +12,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="search-bar-container">
+      <h3>Weather Application</h3>
       <input
         type="text"
         value={city}

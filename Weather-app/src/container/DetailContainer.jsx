@@ -30,20 +30,21 @@ export default DetailContainer;*/
 // DetailContainer.js
 import React from 'react';
 import DetailCard from '../components/DetailCard';
-import '../App.css'
+import './DetailContainer.css';
 
 const DetailContainer = ({ forecastData }) => {
   if (!forecastData || !Array.isArray(forecastData)) {
-    return <p>eroor</p>
+    return <p></p>
   }
 
   // Här använder vi `.slice(1)` för att exkludera dagens väder från listan.
   const upcomingDays = forecastData.slice(1);
 
   return (
-    <div>
-    <h1>Weather Details</h1>
+    <div className='detail-container'>
+    <h2>Forecast</h2>
     <div className="week-forecast-container">
+      
       {upcomingDays.map((dayData, index) => (
         <DetailCard key={index} dayData={dayData} />
       ))}
