@@ -16,8 +16,7 @@ const DetailCard = ({ dayData }) => {
 
   return (
     <div className="detail-card">
-      <h2>{new Date(date).toLocaleDateString('en-US', 
-      { weekday: 'long', month: 'long', day: 'numeric' })}</h2>
+      <h2>{new Date(date).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}</h2>
       <img src={image} alt="weather image" className="card-img" />
       <h3>{temperature}°C</h3>
       <p>Min: {minTemperature}°C / Max: {maxTemperature}°C</p>

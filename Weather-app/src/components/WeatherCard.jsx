@@ -54,11 +54,12 @@ const WeatherCard = ({ forecastData }) => {
     <div className='center-div'>
       <div className='weather-card'>
         <h2>{name}</h2>
-        <h3>{condition}</h3>
-        <h1>{temperature}°C</h1>
+        <img src={image} alt="weather image" className="card-img" />
+        <h2>{temperature}°C</h2>
         <h3>Min Temperature: {minTemp}°C</h3>
         <h3>Max Temperature: {maxTemp}°C</h3>
-        <img src={image} alt="weather image" className="card-img" />
+        <h3>{condition}</h3>
+        
       </div>
     </div>
   );

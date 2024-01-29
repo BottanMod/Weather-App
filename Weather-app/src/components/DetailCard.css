@@ -1,6 +1,6 @@
 /* Styles specific to each forecast detail card */
 .detail-card {
-  background-color: #2a6cc9; /* Tailwind gray-800 */
+  background-color: rgb(27, 26, 26); /* Tailwind gray-800 */
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 0.5rem;

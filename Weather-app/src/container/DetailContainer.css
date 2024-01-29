@@ -5,6 +5,7 @@
     margin-top: 0.2rem;
     gap: 1rem;
     text-align: center;
+    
   }
   
   /* Responsive adjustments */
@@ -17,4 +18,5 @@
     display: flex; 
     flex-direction: row;
     width: 100%;
+    justify-content: center;
   }

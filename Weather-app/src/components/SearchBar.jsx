@@ -6,10 +6,9 @@ const SearchBar = ({ onSearch }) => {
   const [city, setCity] = useState('');
 
   const handleSearch = () => {
-    onSearch(city);
-    // Additional logic if needed
+    const searchQuery = city.trim() || 'Stockholm'; // Use 'Stockholm' if input is empty or only contains spaces
+    onSearch(searchQuery);
   };
-
   return (
     <div className="search-bar-container">
       <h3>Weather Application</h3>
