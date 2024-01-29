@@ -1,4 +1,4 @@
-/* Styles specific to the search bar */
+
 .search-bar-container {
   display: flex;
   align-items: center;
@@ -31,17 +31,17 @@ text-align: center;
 }
 
 .search-bar-input:hover {
-  background-color: #aaaaac28; /* Tailwind green-300 */
+  background-color: #aaaaac28; 
 }
 
 .search-bar-input:focus {
-  border-color: #86efac; /* Tailwind green-300 */
+  border-color: #86efac; 
 }
 
 .search-bar-button {
   padding: 0.5rem 1rem;
   height: 53px;
-  background-color: #1075b9; /* Tailwind green-500 */
+  background-color: #1075b9; 
   color: white;
   border: none;
   cursor: pointer;
@@ -50,7 +50,7 @@ text-align: center;
 }
 
 .search-bar-button:hover {
-  background-color: #86efac; /* Tailwind green-300 */
+  background-color: #86efac; 
 }
 
 .search-bar-container h3{

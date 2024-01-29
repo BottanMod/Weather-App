@@ -1,12 +1,12 @@
-// SearchBar.jsx
+
 import React, { useState } from 'react';
-import './SearchBar.css'; // Import the CSS file
+import './SearchBar.css';
 
 const SearchBar = ({ onSearch }) => {
   const [city, setCity] = useState('');
 
   const handleSearch = () => {
-    const searchQuery = city.trim() || 'Stockholm'; // Use 'Stockholm' if input is empty or only contains spaces
+    const searchQuery = city.trim() || 'Stockholm'; 
     onSearch(searchQuery);
   };
   return (

@@ -2,7 +2,7 @@
 .weather-card{
 width: 400px;
 height: auto;
-background-color: rgb(27, 26, 26); /* Tailwind gray-800 */
+background-color: rgb(27, 26, 26); 
 border-radius: 0.5rem;
 text-align: center;
 padding: 1rem;
@@ -22,7 +22,7 @@ margin: 1rem 0;
 }
 
 .weather-card img {
-  width: 100px; /* Adjust as needed */
+  width: 100px; 
   height: auto;
 }
 

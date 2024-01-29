@@ -1,4 +1,4 @@
-// App.js
+
 import React from 'react';
 import WeatherContainer from './container/WeatherContainer';
 import DetailContainer from './container/DetailContainer';
